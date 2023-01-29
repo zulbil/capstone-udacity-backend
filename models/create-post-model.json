@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "post",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "minLength": 2
+    }
+  },
+  "required": [
+    "message"
+  ],
+  "additionalProperties": false
+}
