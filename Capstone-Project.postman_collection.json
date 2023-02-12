@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "c9d8a70e-85f8-4dcf-b649-05cadf29d568",
+		"name": "Capstone Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19700897"
+	},
+	"item": [
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\": \"Creative a blog in cloud development with Node.JS with chatGTP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appId}}.execute-api.us-east-1.amazonaws.com/dev/posts",
+							"protocol": "https",
+							"host": [
+								"{{appId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Upload Url",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\": \"Creative a blog in cloud development with Node.JS with chatGTP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appId}}.execute-api.us-east-1.amazonaws.com/dev/posts/d0c9029e-ac71-44a7-8ff0-4be97d2d0143/attachment",
+							"protocol": "https",
+							"host": [
+								"{{appId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"posts",
+								"d0c9029e-ac71-44a7-8ff0-4be97d2d0143",
+								"attachment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\": \"Portant les gens sont\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appId}}.execute-api.us-east-1.amazonaws.com/dev/posts/d0c9029e-ac71-44a7-8ff0-4be97d2d0143",
+							"protocol": "https",
+							"host": [
+								"{{appId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"posts",
+								"d0c9029e-ac71-44a7-8ff0-4be97d2d0143"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appId}}.execute-api.us-east-1.amazonaws.com/dev/posts/d0c9029e-ac71-44a7-8ff0-4be97d2d0143",
+							"protocol": "https",
+							"host": [
+								"{{appId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"posts",
+								"d0c9029e-ac71-44a7-8ff0-4be97d2d0143"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{appId}}.execute-api.us-east-1.amazonaws.com/dev/posts",
+							"protocol": "https",
+							"host": [
+								"{{appId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{idToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "appId",
+			"value": "gsaexo3f09",
+			"type": "string"
+		},
+		{
+			"key": "idToken",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rRTBORGd3UXpVMlJqYzROekF5UlRkRlJUTXdRalJCT1RRMU5FTkVNRGt6TmtJM1FrRTJSQSJ9.eyJjbGllbnRJRCI6InF4NGwyV0RCODh6TlRweENEa09RaU8yQUR5MlZwUWd0IiwiY3JlYXRlZF9hdCI6IjIwMjItMTEtMjBUMDQ6NTY6MzQuMjIxWiIsImVtYWlsIjoiam9lbGFsZXhhbmRyZWtoYW5nQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmYW1pbHlfbmFtZSI6IktoYW5nIiwiZ2l2ZW5fbmFtZSI6IkpvZWwgQWxleGFuZHJlIiwiaWRlbnRpdGllcyI6W3sicHJvdmlkZXIiOiJnb29nbGUtb2F1dGgyIiwidXNlcl9pZCI6IjEwOTMwNTg5MjQwMzk4MTQ2OTkwOSIsImNvbm5lY3Rpb24iOiJnb29nbGUtb2F1dGgyIiwiaXNTb2NpYWwiOnRydWV9XSwibG9jYWxlIjoiZW4iLCJuYW1lIjoiSm9lbCBBbGV4YW5kcmUgS2hhbmciLCJuaWNrbmFtZSI6ImpvZWxhbGV4YW5kcmVraGFuZyIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BRWRGVHA2cXZjbFotbmdLb3c1V084RFZONHFZVmJXVlNCMXRRWTBUaEhxQU1nPXM5Ni1jIiwidXBkYXRlZF9hdCI6IjIwMjMtMDItMTJUMDQ6MDA6MDMuMzYxWiIsInVzZXJfaWQiOiJnb29nbGUtb2F1dGgyfDEwOTMwNTg5MjQwMzk4MTQ2OTkwOSIsInVzZXJfbWV0YWRhdGEiOnt9LCJhcHBfbWV0YWRhdGEiOnt9LCJpc3MiOiJodHRwczovL3p1bGJpbC5ldS5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDkzMDU4OTI0MDM5ODE0Njk5MDkiLCJhdWQiOiJxeDRsMldEQjg4ek5UcHhDRGtPUWlPMkFEeTJWcFFndCIsImlhdCI6MTY3NjE3NDQwNCwiZXhwIjoxNjc2NjA2NDA0fQ.B1SPmt37bxIzmQ5Yp7kiRgxfuWcYj8LIJh74jW37DEEWRWH4du9g5bEnW9MUq6jw_nfQOgOgFHT4YMGywtRyzKfe9ug53BKMD_h_1Mom7vJvK0hKSe4KCHh7i3v3cIFC5PmGEmddgl_vh8_VnpIPs-NEEli86uip-L6jFmGRjd3s7_8Tzn2ORCKsArEsyWxH9inuP2TYeZ89v069Xiq-cpnaWefVc-XPWxShPpKGnO_T73rAeunSAcq9192BPBW0Txj3eyQh39OPqXgSKUoFv5ghcNSgxna7v3V6v8GzNnOWbTgz46VGucCTTaAnjiUVzkCHn5iFA_zdMsorMAJchA\n",
+			"type": "string"
+		}
+	]
+}
