@@ -101,7 +101,7 @@ It should return a new Post item that looks like this:
 
 * `UpdatePost` - should update a post item created by a current user. A shape of data send by a client application to this function can be found in the `UpdatePostRequest.ts` file
 
-It receives an object that contains three fields that can be updated in a TODO item:
+It receives an object that contains three fields that can be updated in a post item:
 
 ```json
 {
@@ -164,7 +164,7 @@ sls deploy -v
 
 Here is the front end project (https://github.com/zulbil/capstone-udacity-frontend)
 
-This should start a development server with the React application that will interact with the serverless TODO application.
+This should start a development server with a Next.JS application that will interact with the serverless application.
 
 # Postman collection
 
