@@ -1,3 +1,3 @@
 export interface PostUpdate {
-  attachmentUrl?: string
+  message?: string
 }

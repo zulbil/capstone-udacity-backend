@@ -3,13 +3,13 @@
   "title": "post",
   "type": "object",
   "properties": {
-    "attachmentUrl": {
+    "message": {
       "type": "string",
       "minLength": 2
     }
   },
   "required": [
-    "attachmentUrl"
+    "message"
   ],
   "additionalProperties": false
 }

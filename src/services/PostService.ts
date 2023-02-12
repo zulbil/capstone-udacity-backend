@@ -66,15 +66,15 @@ export default class PostService {
         ) : Promise<PostUpdate> {
         
         try {
-            this.logger.info('Updating todo');
+            this.logger.info('Updating Post');
 
             const postIemToUpdate : Partial<PostUpdate> = {
-                attachmentUrl: updatePostRequest.attachmentUrl
+                message: updatePostRequest.message
             };
 
-            if (!postIemToUpdate.attachmentUrl) {
-                this.logger.info('AttachmentUrl property are invalid');
-                throw new Error('AttachmentUrl property are invalid');
+            if (!postIemToUpdate.message) {
+                this.logger.info('Message property are invalid');
+                throw new Error('Message property are invalid');
             }
             return await postRepository.updatePost(id, userId, postIemToUpdate);
         } catch (error:any) {

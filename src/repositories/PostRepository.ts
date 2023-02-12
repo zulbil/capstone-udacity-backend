@@ -1,7 +1,6 @@
 import { DocumentClient } from "aws-sdk/clients/dynamodb";
 import { PostItem } from '../models/PostItem'
 import { PostUpdate } from "../models/PostUpdate";
-//import { PostUpdate } from '../models/PostUpdate';
 import { createLogger } from "../utils/logger";
 
 export default class PostRepository {
@@ -64,12 +63,12 @@ export default class PostRepository {
                 postId 
               },
               UpdateExpression:
-                  "set #attachmentUrl = :attachmentUrl",
+                  "set #message = :message",
               ExpressionAttributeNames: {
-                  "#attachmentUrl": "attachmentUrl"
+                  "#message": "message"
               },
               ExpressionAttributeValues: {
-                  ":attachmentUrl": postItem.attachmentUrl
+                  ":message": postItem.message
               },
               ReturnValues: "ALL_NEW",
           })
